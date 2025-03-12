@@ -1,0 +1,172 @@
+.transacciones-container {
+    position: relative; /* Permite que el botón se posicione dentro del contenedor */
+    height: 100%;
+    /* Espaciado opcional para no pegarlo a los bordes */
+  }
+  
+  .btn-agregar {
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    top: 10px; /* Lo sube a la parte superior */
+    right: 10px; /* Lo pega a la derecha */
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-agregar:hover {
+    background-color: #16a085;
+
+
+    /* --------------- */
+  }
+ /* Fondo oscuro cuando el formulario está abierto */
+.formulario-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilo del formulario */
+  .formulario {
+    background: #f7f9fc;
+    padding: 30px;
+    border-radius: 12px;
+    width: 380px; /* Aumentado para mejor espacio */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Arial", sans-serif;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro del formulario */
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Título del formulario */
+  .formulario h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Contenedor de inputs para mejor organización */
+  .formulario .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espacio entre los inputs */
+    margin-bottom: 15px;
+    width: 100%; /* Asegura que los inputs ocupen todo el ancho del formulario */
+  }
+  
+  /* Estilo para etiquetas */
+  .formulario label {
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  /* Estilo para inputs y select */
+  .formulario input,
+  .formulario select,
+  .formulario textarea {
+    width: 100%;
+    padding: 12px; /* Más padding para evitar tocar los bordes */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .formulario input:focus,
+  .formulario select:focus,
+  .formulario textarea:focus {
+    border: 1px solid #5aa9e6;
+  }
+  
+  /* Botones */
+  .formulario .botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%; /* Asegura que los botones ocupen todo el ancho del formulario */
+  }
+  
+  .formulario button {
+    flex: 1;
+    padding: 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .formulario button:first-of-type {
+    background: #ff6b6b;
+    color: white;
+  }
+  
+  .formulario button:first-of-type:hover {
+    background: #ff4c4c;
+  }
+  
+  .formulario button:last-of-type {
+    background: #5aa9e6;
+    color: white;
+  }
+  
+  .formulario button:last-of-type:hover {
+    background: #4a90e2;
+  }
+
+/* Estilo para las alertas */
+.alerta {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 1100;
+}
+
+.alerta.exito {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.alerta.error {
+  background-color: #e74c3c;
+  color: white;
+}

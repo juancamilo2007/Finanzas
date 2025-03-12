@@ -1,0 +1,115 @@
+/* Estilos generales */
+.contenedor {
+  display: flex;
+  height: 100vh;
+  background: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos del menú lateral */
+.sidebar {
+  width: 250px;
+  background: #2c3e50; /* Color de fondo del menú */
+  color: white;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de la lista del menú */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin: 8px 0;
+  background: #34495e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Cambia el color cuando el mouse pasa sobre la opción */
+.sidebar li:hover {
+  background: #1abc9c;
+  transform: scale(1.05);
+}
+
+/* La opción seleccionada queda resaltada */
+.sidebar li.activo {
+  background: #16a085;
+}
+
+/* Botón de cerrar sesión */
+.sidebar a {
+  text-align: center;
+  display: block;
+  padding: 12px;
+  margin-top: 20px;
+  background: #e74c3c;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: #c0392b;
+}
+
+/* Contenedor de contenido dinámico */
+.contenido {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🆕 Botón para abrir/cerrar el menú */
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+/* 🆕 Estilos cuando el menú está cerrado */
+.sidebar.cerrado {
+  width: 70px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.sidebar.cerrado h2,
+.sidebar.cerrado a {
+  display: none; /* Oculta el título y el botón de cerrar sesión */
+}
+
+/* Oculta los textos de las opciones cuando el menú está cerrado */
+.sidebar.cerrado ul li {
+  justify-content: center;
+}
+
+.sidebar.cerrado ul li span {
+  display: none;
+}
+
